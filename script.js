@@ -34,11 +34,12 @@ ctx.fillRect(0,0,canvas.width,canvas.height);
 //draw a circle
 ctx.beginPath();
 ctx.arc(center_x,center_y,radius,0,2*Math.PI);
- var img = document.getElementById("https://unicxa.github.io/CONZ.png");
+var img = new Image();
+img.src = "https://unicxa.github.io/CONZ.png";
 ctx.drawImage(img, center_x, center_y);
+analyser.getByteFrequencyData(frequency_array);
 ctx.stroke();
 
-analyser.getByteFrequencyData(frequency_array);
 for(var i = 0; i < bars; i++){
 //divide a circle into equal parts
 rads = Math.PI * 2 / bars;

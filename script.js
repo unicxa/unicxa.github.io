@@ -7,7 +7,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "file:///C:/Users/sickray34s/Desktop/VIZI/Hardstyletext.mp3"; // the source path
+audio.src = "https://unicxa.github.io/Hardstyletext.mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);
@@ -34,9 +34,10 @@ ctx.fillRect(0,0,canvas.width,canvas.height);
 //draw a circle
 ctx.beginPath();
 ctx.arc(center_x,center_y,radius,0,2*Math.PI);
-ctx.stroke();
-var img = document.getElementById("CONZ.png");
+ var img = document.getElementById("CONZ.png");
 ctx.drawImage(img, center_x, center_y);
+ctx.stroke();
+
 analyser.getByteFrequencyData(frequency_array);
 for(var i = 0; i < bars; i++){
 //divide a circle into equal parts

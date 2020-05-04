@@ -36,7 +36,7 @@ ctx.beginPath();
 ctx.arc(center_x,center_y,radius,0,2*Math.PI);
 var img = new Image();
 img.src = "https://unicxa.github.io/CONZ.png";
-ctx.drawImage(img, center_x - 150 , center_y + (center_y - 150);
+ctx.drawImage(img, center_x - 150 , center_y + center_y - 150);
 analyser.getByteFrequencyData(frequency_array);
 ctx.stroke();
 

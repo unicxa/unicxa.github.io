@@ -3,7 +3,10 @@ x_end, y_end, bar_height, bar_width,
 frequency_array;
 bars = 200;
 bar_width = 2;
+var button = document.createElement('BUTTON');  
+  button.onclick = initPage();
 function initPage(){
+ 
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
@@ -14,6 +17,7 @@ analyser.connect(context.destination);
 frequency_array = new Uint8Array(analyser.frequencyBinCount);
 audio.play();
 animationLooper();
+
 }
 function animationLooper(){
 // set to the size of device
@@ -36,7 +40,7 @@ ctx.beginPath();
 ctx.arc(center_x,center_y,radius,0,2*Math.PI);
 var img = new Image();
 img.src = "https://unicxa.github.io/CONZ.png";
-ctx.drawImage(img, center_x - 128 , center_y - 128);
+ctx.drawImage(img, center_x -128, center_y -128);
 analyser.getByteFrequencyData(frequency_array);
 ctx.stroke();
 

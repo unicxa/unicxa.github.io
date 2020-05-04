@@ -7,7 +7,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "file:///C:/Users/sickray34s/Desktop/VIZI/Hardstyletext.mp3"; // the source path
+audio.src = "https://unicxa.github.io/Hardstyletext.mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);

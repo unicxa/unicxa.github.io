@@ -3,8 +3,7 @@ x_end, y_end, bar_height, bar_width,
 frequency_array;
 bars = 200;
 bar_width = 2;
-var button = document.createElement('BUTTON');  
-  button.onclick = initPage();
+
 function initPage(){
  
 audio = new Audio();

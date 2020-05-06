@@ -10,7 +10,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "https://unicxa.github.io/Hardstyletext.mp3"; // the source path
+audio.src = "https://unicxa.github.io/Dune%20-%20Hardcore%20Vibes%20(Conz%20Bootleg%20Remix).mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);

@@ -9,7 +9,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "https://unicxa.github.io/Dune%20-%20Hardcore%20Vibes%20(Conz%20Bootleg%20Remix).mp3"; // the source path
+audio.src = "https://unicxa.github.io/CONZ%20-%20Beyond%20The%20Void.mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);
@@ -30,8 +30,8 @@ center_y = canvas.height / 2;
 radius = 150;
 // style the background
 var gradient = ctx.createLinearGradient(0,0,0,canvas.height);
-gradient.addColorStop(0,"rgba(35, 7, 77, 1)");
-gradient.addColorStop(1,"rgba(204, 83, 51, 1)");
+gradient.addColorStop(0,"rgba(10, 204, 0, 1)");
+gradient.addColorStop(1,"rgba(1, 81, 0, 1)");
 ctx.fillStyle = gradient;
 ctx.fillRect(0,0,canvas.width,canvas.height);
 //draw a circle
@@ -41,10 +41,10 @@ var img = new Image();
 img.src = "https://unicxa.github.io/CONZ.png";
 ctx.drawImage(img, center_x -128, center_y -128);
 
-ctx.font = "30px Comic Sans MS";
-ctx.fillStyle = "rgba(204, 83, 51, 1)";
-ctx.textAlign = "center";
-ctx.fillText("Dune - Hardcore Vibes (Conz Bootleg Remix)", center_x - 460 , center_y - 280 );
+//ctx.font = "30px Comic Sans MS";
+//ctx.fillStyle = "rgba(204, 83, 51, 1)";
+//ctx.textAlign = "center";
+//ctx.fillText("Dune - Hardcore Vibes (Conz Bootleg Remix)", center_x - 460 , center_y - 280 );
 
 analyser.getByteFrequencyData(frequency_array);
 ctx.stroke();

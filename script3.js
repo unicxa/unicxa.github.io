@@ -9,7 +9,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "https://unicxa.github.io/master/Conz%20-%20Jupiters%20Moon.mp3"; // the source path
+audio.src = "https://unicxa.github.io/Conz%20-%20Jupiters%20Moon.mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);

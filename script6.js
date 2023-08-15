@@ -30,7 +30,7 @@ center_y = canvas.height / 2;
 radius = 150;
 // style the background
 var gradient = ctx.createLinearGradient(0,0,0,canvas.height);
-gradient.addColorStop(0,"rgba(0, 255, 182, 1)");
+gradient.addColorStop(0,"rgba(0, 85, 160, 1)");
 gradient.addColorStop(1,"rgba(0, 30, 21, 1)");
 ctx.fillStyle = gradient;
 ctx.fillRect(0,0,canvas.width,canvas.height);

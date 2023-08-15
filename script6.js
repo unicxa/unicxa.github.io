@@ -9,7 +9,7 @@ function initPage(){
 audio = new Audio();
 context = new (window.AudioContext || window.webkitAudioContext)();
 analyser = context.createAnalyser();
-audio.src = "https://unicxa.github.io/CL0UD%20N1N3.aif"; // the source path
+audio.src = "https://unicxa.github.io/CL0UD%20N1N3.mp3"; // the source path
 source = context.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(context.destination);
@@ -39,7 +39,7 @@ ctx.beginPath();
 ctx.arc(center_x,center_y,radius,0,2*Math.PI);
 var img = new Image();
 img.src = "https://unicxa.github.io/CONZ.png";
-ctx.drawImage(img, center_x -64, center_y -64);
+ctx.drawImage(img, center_x -128, center_y -128);
 
 //ctx.font = "30px Comic Sans MS";
 //ctx.fillStyle = "rgba(204, 83, 51, 1)";

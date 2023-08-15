@@ -1,6 +1,6 @@
 var canvas, ctx, center_x, center_y, radius, bars, 
 x_end, y_end, bar_height, bar_width,
-frequency_array;
+frequency_array, color;
 bars = 200;
 bar_width = 2;
 
@@ -58,8 +58,9 @@ x = center_x + Math.cos(rads * i) * (radius);
 y = center_y + Math.sin(rads * i) * (radius);
 x_end = center_x + Math.cos(rads * i)*(radius + bar_height);
 y_end = center_y + Math.sin(rads * i)*(radius + bar_height);
+ color = Math.floor(Math.random() * 256);
 //draw a bar
-drawBar(x, y, x_end, y_end, bar_width,frequency_array[i]);
+drawBar(x, y, x_end, y_end, bar_width,frequency_array[i],color);
 
 
 
@@ -67,8 +68,8 @@ drawBar(x, y, x_end, y_end, bar_width,frequency_array[i]);
 window.requestAnimationFrame(animationLooper);
 }
 // for drawing a bar
-function drawBar(x1, y1, x2, y2, width,frequency){
-var lineColor = "rgb(" + frequency + ", " + frequency + ", " + 205 + ")";
+function drawBar(x1, y1, x2, y2, width,frequency,color){
+var lineColor = "rgb(" + frequency + ", " + frequency + ", " + color + ")";
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;
 ctx.beginPath();
